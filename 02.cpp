@@ -10,6 +10,7 @@
 #include <assert.h>
 using namespace std;
 int cnt[50];
+//实现一个LRUCache 代码
 class LRUCache {
 public:
 	LRUCache(int capacity) {
@@ -46,9 +47,10 @@ private:
 	list<pair<int, int>> cache;
 	unordered_map<int, list<pair<int, int>>::iterator> has;
 };
+//随机选择算法
 void knth1(int a[], int n, int m)
 {
-	//��n�����������ѡȡm��  ���֡�
+	//在n个整数中随机选取m个  数字。
 	for (int i = 0; i < n; i++)
 	{
 		if (rand() % (n - i) < m)
@@ -58,7 +60,7 @@ void knth1(int a[], int n, int m)
 		}
 	}
 }
- 
+ //实现memcpy函数
 void mymemcpy1(void* dst, const void* src, int num)
 {
 	assert(dst != NULL && src != NULL);
@@ -79,6 +81,7 @@ void mymemcpy1(void* dst, const void* src, int num)
 		}
 	}
 }
+//mencpy函数改进优化
 void mymemcpy2(void* dst, const void* src, size_t num)
 {
 	assert(dst != NULL && src != NULL);
@@ -97,7 +100,7 @@ void mymemcpy2(void* dst, const void* src, size_t num)
 		*pchardst++ = *pcharsrc++;
 	}
 }
-
+//测试智能指针
 void process(ProSmartPointer p)
 {
 	int a;
