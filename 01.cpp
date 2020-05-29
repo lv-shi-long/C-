@@ -15,6 +15,7 @@ void end()
 	exit(0);
 }
 int res = 0;
+//检验该位是否可以填数字
 bool check(int x, int y, int num)
 {
 	for (int ste = 1; ste <= 9; ste++)
